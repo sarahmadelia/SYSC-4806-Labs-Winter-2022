@@ -1,7 +1,7 @@
 
 import static org.junit.Assert.*;
 import org.junit.*;
-import pack.BuddyInfo;
+import addressbook.BuddyInfo;
 
 import javax.persistence.*;
 

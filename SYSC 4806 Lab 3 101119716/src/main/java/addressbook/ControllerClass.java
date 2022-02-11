@@ -1,11 +1,8 @@
-package pack;
+package addressbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Controller class, initalized with Spring tutorial
@@ -38,6 +35,13 @@ public class ControllerClass {
         model.addAttribute("addressbook", book);
         model.addAttribute("newBuddy", new BuddyInfo());
         return "addressbook";
+//    public void addBuddy(@RequestBody BuddyInfo buddy) {
+//        Long aBID = buddy.getId();
+//        AddressBook book = AddressBookRepository.findAddressBookById(aBID);
+//        BuddyInfoRepository.save(buddy);
+//        book.addBuddy(buddy);
+//        AddressBookRepository.save(book);
+
     }
 
 }

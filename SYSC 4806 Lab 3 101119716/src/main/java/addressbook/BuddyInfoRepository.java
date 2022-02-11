@@ -1,10 +1,10 @@
-package pack;
+package addressbook;
 
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import pack.BuddyInfo;
+import addressbook.BuddyInfo;
 
 /**
  * Updated for Lab 4
@@ -19,4 +19,5 @@ public interface BuddyInfoRepository extends CrudRepository<BuddyInfo,Long>{
     List<BuddyInfo> findByName(String name);
     BuddyInfo findByPhoneNumber(String number);
     BuddyInfo findById(long id);
+    //BuddyInfo save(BuddyInfo buddy);
 }

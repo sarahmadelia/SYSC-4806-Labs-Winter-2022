@@ -1,9 +1,8 @@
-package pack;
+package addressbook;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.*;
 
 /**
  * Updated for Lab 4

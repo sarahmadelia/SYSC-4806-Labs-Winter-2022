@@ -1,4 +1,4 @@
-package pack;
+package addressbook;
 
 import javax.persistence.*;
 

@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
-import pack.AddressBook;
-import pack.BuddyInfo;
+import addressbook.AddressBook;
+import addressbook.BuddyInfo;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
