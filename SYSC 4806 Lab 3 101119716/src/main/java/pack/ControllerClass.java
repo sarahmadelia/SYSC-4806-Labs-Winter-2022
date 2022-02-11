@@ -27,9 +27,10 @@ public class ControllerClass {
         return "addressbook";
     }
 
-    @PostMapping("/")
+    @PostMapping("/Greeting")
     public String addBuddy(@ModelAttribute BuddyInfo buddy, Model model) {
-        AddressBook book = repository.findById(buddy.getId()).orElse(new AddressBook());
+        AddressBook book = repository.findById(new Long(1)).orElse(new AddressBook());
+
         book.addBuddy(buddy);
         buddy.setAddressBook(book);
         repository.save(book);
