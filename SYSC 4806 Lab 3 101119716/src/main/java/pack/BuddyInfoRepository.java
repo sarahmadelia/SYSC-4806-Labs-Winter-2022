@@ -2,7 +2,8 @@ package pack;
 
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
 import pack.BuddyInfo;
 
 /**
@@ -13,7 +14,7 @@ import pack.BuddyInfo;
  */
 
 
-@Repository
+@RepositoryRestResource(collectionResourceRel = "buddy", path="buddy")
 public interface BuddyInfoRepository extends CrudRepository<BuddyInfo,Long>{
     List<BuddyInfo> findByName(String name);
     BuddyInfo findByPhoneNumber(String number);
