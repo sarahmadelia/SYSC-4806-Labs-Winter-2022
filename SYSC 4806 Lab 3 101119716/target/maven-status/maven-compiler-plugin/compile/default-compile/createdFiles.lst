@@ -1,10 +1,4 @@
-AddressBookModel.class
-Launcher.class
-AddressBookView.class
-PrintBuddiesActionListener.class
-BoxLayoutPanel.class
-AddressBookActionListener.class
-AddressBook.class
-ActionListenerButton.class
-AddNewBuddyActionListener.class
-BuddyInfo.class
+pack\BuddyInfoRepository.class
+pack\AddressBook.class
+pack\BuddyInfo.class
+pack\AccessingDataJpaApplication.class

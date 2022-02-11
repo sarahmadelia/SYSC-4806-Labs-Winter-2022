@@ -1,11 +1,13 @@
 
 import static org.junit.Assert.*;
 import org.junit.*;
+import pack.BuddyInfo;
+
 import javax.persistence.*;
 
 /**
  * Lab 2
- * Test class for BuddyInfo
+ * Test class for pack.BuddyInfo
  * @author Sarah Abdallah
  * @version 2022-01-26
  */
