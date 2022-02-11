@@ -1,5 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
+import pack.AddressBook;
+import pack.BuddyInfo;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -8,7 +11,7 @@ import static org.junit.Assert.*;
 
 /**
  * Lab 2
- * Test class for AddressBook
+ * Test class for pack.AddressBook
  * @author Sarah Abdallah
  * @version 2022-01-26
  */

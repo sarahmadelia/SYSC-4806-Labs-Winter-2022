@@ -1,3 +1,5 @@
+package pack;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -9,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * Updated for Lab 4
  *
- * @author Sarah Abdallah
+ * @author Sarah Abdallah (Based on Repository from Lab 3 specs)
  * @version 2022-01-26
  */
 @SpringBootApplication
