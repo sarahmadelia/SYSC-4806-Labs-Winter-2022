@@ -4,16 +4,10 @@ import java.util.List;
 import java.util.*;
 
 /**
- * SYSC 4806 LAB 3
- * Part 1: Simple GUI, populate a BuddyInfo and save it in Address Book
- *        MVC principles:
- *        Register Controller to View and View to Model
- * Part 2: Use DI to assemble components of a Swing Application
- *
- * *This section was barely changed from Lab 2
+ * Updated for Lab 4
  *
  * @author Sarah Abdallah
- * @version 2022-02-01
+ * @version 2022-01-26
  */
 
 @Entity
@@ -112,8 +106,7 @@ public class AddressBook {
      * @param args
      */
     public static void main(String[] args) {
-        Launcher launcher = new Launcher();
-        launcher.launch();
+
     }
 
 

@@ -3,7 +3,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Lab 3
+ * Updated for Lab 4
+ *
  * @author Sarah Abdallah
  * @version 2022-01-26
  */
