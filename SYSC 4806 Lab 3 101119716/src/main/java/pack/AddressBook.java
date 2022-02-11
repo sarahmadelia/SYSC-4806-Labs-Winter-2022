@@ -30,6 +30,10 @@ public class AddressBook {
         myBuddies = new ArrayList<>();
     }
 
+    public AddressBook(Long id) {
+        this.id = id;
+        this.myBuddies = new ArrayList<BuddyInfo>();
+    }
     /**
      * adds a buddy info object to the address book
      * @param aBuddy

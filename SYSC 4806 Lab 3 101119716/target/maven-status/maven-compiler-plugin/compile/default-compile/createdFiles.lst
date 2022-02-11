@@ -1,4 +1,7 @@
 pack\BuddyInfoRepository.class
-pack\AddressBook.class
-pack\BuddyInfo.class
 pack\AccessingDataJpaApplication.class
+pack\ControllerClass.class
+pack\AddressBook.class
+pack\AddressBookRepository.class
+pack\BuddyInfo.class
+pack\Application.class

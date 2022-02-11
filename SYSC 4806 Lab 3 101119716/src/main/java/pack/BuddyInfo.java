@@ -1,8 +1,6 @@
 package pack;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Updated for Lab 4
@@ -19,6 +17,9 @@ public class BuddyInfo {
     private String name;
     private String phoneNumber;
 
+    @ManyToOne
+    @JoinColumn(name = "addressbookId")
+    private AddressBook addressBook;
     /**
      * Default constructor for the pack.BuddyInfo class
      *
@@ -27,6 +28,7 @@ public class BuddyInfo {
         this.name="";
         this.phoneNumber="";
     }
+
 
     /**
      * COnstructor for pack.BuddyInfo class
@@ -89,5 +91,8 @@ public class BuddyInfo {
         this.id=id;
     }
 
+    public void setAddressBook(AddressBook addressBook) {
+        this.addressBook = addressBook;
+    }
 
 }
