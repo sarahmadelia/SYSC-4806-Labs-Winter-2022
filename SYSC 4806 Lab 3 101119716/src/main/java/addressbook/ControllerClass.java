@@ -26,7 +26,7 @@ public class ControllerClass {
 
     @PostMapping("/Greeting")
     public String addBuddy(@ModelAttribute BuddyInfo buddy, Model model) {
-        AddressBook book = repository.findById(new Long(1)).orElse(new AddressBook());
+        AddressBook book = repository.findById(new Long(1)).orElse(new AddressBook(1L));
 
         book.addBuddy(buddy);
         buddy.setAddressBook(book);
@@ -42,6 +42,18 @@ public class ControllerClass {
 //        book.addBuddy(buddy);
 //        AddressBookRepository.save(book);
 
+    }
+
+    @GetMapping("/a/{ID}")
+    public String addBuddy(Model model, @PathVariable Long ID){
+        AddressBook book = repository.findById(ID).orElse(null);
+        if(book == null){
+            book = new AddressBook(ID);
+            repository.save(book);
+        }
+        model.addAttribute("addressbook", book);
+        model.addAttribute("newBuddy", new BuddyInfo());
+        return "addressbook";
     }
 
 }

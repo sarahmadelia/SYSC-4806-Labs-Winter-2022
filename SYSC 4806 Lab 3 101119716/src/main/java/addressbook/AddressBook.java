@@ -19,7 +19,7 @@ public class AddressBook {
     @GeneratedValue
     private Long id;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "addressBook")
     private List<BuddyInfo> myBuddies;
 
     /**
