@@ -18,7 +18,7 @@
     </tr>
 </table>
 
-<form action="#" th:action="@{/Greeting}" th:object="${newBuddy}" method="post">
+<form action="#" th:object="${newBuddy}" method="post">
     Name: <input type="text" th:field="*{name}"> <br>
     Phone Number: <input type="text" th:field="*{phoneNumber}"> <br>
     <button type="submit">Add new buddy</button>

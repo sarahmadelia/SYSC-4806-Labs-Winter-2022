@@ -56,4 +56,20 @@ public class ControllerClass {
         return "addressbook";
     }
 
+    @PostMapping("/a/{ID}")
+    public String addBuddyToAddressBook(@ModelAttribute BuddyInfo buddy, Model model, @PathVariable Long ID){
+        AddressBook book = repository.findById(ID).orElse(null);
+        if(book == null){
+            book = new AddressBook(ID);
+            repository.save(book);
+        }
+        book.addBuddy(buddy);
+        buddy.setAddressBook(book);
+        repository.save(book);
+
+        model.addAttribute("addressbook", book);
+        model.addAttribute("newBuddy", new BuddyInfo());
+        return "addressbook";
+    }
+
 }
