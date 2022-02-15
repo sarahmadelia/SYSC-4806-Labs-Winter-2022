@@ -39,17 +39,17 @@ public class AddressBookTest {
         assertTrue(addressBook.contains(buddy2));
     }
 
-    @Test
-    public void removeBuddy() {
-        addressBook.addBuddy(buddy1);
-        addressBook.addBuddy(buddy2);
 
-        addressBook.removeBuddy(0);
-        assertFalse(addressBook.contains(buddy1));
-
-        addressBook.removeBuddy(0);
-        assertFalse(addressBook.contains(buddy2));
-    }
+//    public void removeBuddy() {
+//        addressBook.addBuddy(buddy1);
+//        addressBook.addBuddy(buddy2);
+//
+//        addressBook.removeBuddy(0);
+//        assertFalse(addressBook.contains(buddy1));
+//
+//        addressBook.removeBuddy(0);
+//        assertFalse(addressBook.contains(buddy2));
+//    }
 
     @Test
     public void contains() {

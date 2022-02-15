@@ -5,7 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Controller class, initalized with Spring tutorial
+ * Controller class, initalised with Spring tutorial
+ * Didn't have time to finish but will before Lab 5
+ *
  */
 @Controller
 public class ControllerClass {
@@ -14,7 +16,7 @@ public class ControllerClass {
     @Autowired
     AddressBookRepository repository;
 
-    @GetMapping("/Greeting")
+    @GetMapping("/greeting")
     public String index(Model model) {
 
         AddressBook book = new AddressBook();
@@ -24,7 +26,7 @@ public class ControllerClass {
         return "addressbook";
     }
 
-    @PostMapping("/Greeting")
+    @PostMapping("/greeting")
     public String addBuddy(@ModelAttribute BuddyInfo buddy, Model model) {
         AddressBook book = repository.findById(new Long(1)).orElse(new AddressBook(1L));
 
@@ -35,15 +37,8 @@ public class ControllerClass {
         model.addAttribute("addressbook", book);
         model.addAttribute("newBuddy", new BuddyInfo());
         return "addressbook";
-//    public void addBuddy(@RequestBody BuddyInfo buddy) {
-//        Long aBID = buddy.getId();
-//        AddressBook book = AddressBookRepository.findAddressBookById(aBID);
-//        BuddyInfoRepository.save(buddy);
-//        book.addBuddy(buddy);
-//        AddressBookRepository.save(book);
 
     }
-
     @GetMapping("/a/{ID}")
     public String addBuddy(Model model, @PathVariable Long ID){
         AddressBook book = repository.findById(ID).orElse(null);

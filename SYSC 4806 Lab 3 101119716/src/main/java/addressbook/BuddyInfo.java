@@ -1,6 +1,7 @@
 package addressbook;
 
 import javax.persistence.*;
+import java.util.*;
 
 /**
  * Updated for Lab 4
@@ -20,6 +21,7 @@ public class BuddyInfo {
     @ManyToOne
     @JoinColumn(name = "addressbookId")
     private AddressBook addressBook;
+
     /**
      * Default constructor for the pack.BuddyInfo class
      *
@@ -31,7 +33,7 @@ public class BuddyInfo {
 
 
     /**
-     * COnstructor for pack.BuddyInfo class
+     * Constructor (2) for BuddyInfo
      * @param name
      * @param phoneNumber
      */
@@ -40,6 +42,20 @@ public class BuddyInfo {
         this.phoneNumber= phoneNumber;
 
     }
+
+
+    /**
+     * Constructor (3) for BuddyInfo
+     * @param name
+     * @param phoneNumber
+     * @param addressBook
+     */
+    public BuddyInfo(String name, String phoneNumber, AddressBook addressBook){
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.addressBook = addressBook;
+    }
+
 
     /**
      * Getter for a buddy's name
@@ -89,6 +105,11 @@ public class BuddyInfo {
      */
     public void setId(Long id){
         this.id=id;
+    }
+
+
+    public Long getAddressBookId(){
+        return addressBook.getId();
     }
 
     public void setAddressBook(AddressBook addressBook) {

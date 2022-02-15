@@ -31,39 +31,49 @@ public class AddressBook {
 
     public AddressBook(Long id) {
         this.id = id;
-        this.myBuddies = new ArrayList<BuddyInfo>();
+        this.myBuddies = new ArrayList<>();
     }
     /**
-     * adds a buddy info object to the address book
-     * @param aBuddy
+     * Updated method: adds a buddy info object to the address book
+     * @param aBuddy buddyinfo object
+     * @return AddressBook with buddies
      */
-    public void addBuddy(BuddyInfo aBuddy) {
+    public AddressBook addBuddy(BuddyInfo aBuddy) {
         if (aBuddy != null) {
             myBuddies.add(aBuddy);
+            aBuddy.setAddressBook(this);
         }
+        return this;
     }
 
-
+//    public AddressBook removeBuddy(Long id){
+//        for(int index=0; i<myBuddies.size();index++){
+//
+//    }
 
     /**
-     * removes a buddy info object from the address book
-     * @param index
+     * Updated method: removes a buddy info object from the ddress book
+     * @param id
      * @return
      */
-    public BuddyInfo removeBuddy(int index){
-        if(index>=0 && index < myBuddies.size()) {
-            return myBuddies.remove(index);
+        public AddressBook removeBuddy(Long id){
+            for(int i = 0; i < myBuddies.size(); i++){
+                if(myBuddies.get(i).getId().equals(id)){
+                    myBuddies.get(i).setAddressBook(null);
+                    myBuddies.remove(i);
+                    return this;
+                }
+            }
+            return this;
         }
-        return null;
-    }
 
-    /**
-     * checking to see if the book contains a buddy
-     * @param object
-     * @return
-     */
+
+        /**
+         * checking to see if the book contains a buddy
+         * @param object
+         * @return
+         */
     public boolean contains(BuddyInfo object){
-
         return myBuddies.contains(object);
     }
 
@@ -72,7 +82,6 @@ public class AddressBook {
      */
     public void getInfo(){
         for(int i=0;i<myBuddies.size();i++) {
-
             System.out.println(myBuddies.get(i));
 
         }
