@@ -1,23 +1,14 @@
 package com.example.spring;
-
-import java.util.List;
-
-import com.example.spring.BuddyInfo;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
 /**
- * Updated for Lab 4
+ * Updated for Lab 6
+ * Taken from Spring Tutorial (Accessing JPA Data)
  *
  * @author Sarah Abdallah
- * @version 2022-01-26
+ * @version 2022-03-04
  */
+@RepositoryRestResource(collectionResourceRel = "BuddyInfo", path = "BuddyInfo")
 
-
-@RepositoryRestResource(collectionResourceRel = "buddy", path="buddy")
-public interface BuddyInfoRepository extends CrudRepository<BuddyInfo,Long>{
-    List<BuddyInfo> findByName(String name);
-    BuddyInfo findByPhoneNumber(String number);
-    BuddyInfo findById(long id);
-    //BuddyInfo save(BuddyInfo buddy);
+public interface BuddyInfoRepository extends CrudRepository<BuddyInfo, Integer>{
 }

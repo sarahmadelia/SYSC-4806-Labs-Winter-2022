@@ -1,12 +1,15 @@
 package com.example.spring;
-import java.util.List;
-
-import com.example.spring.AddressBook;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
-@RepositoryRestResource(collectionResourceRel = "addressbook", path = "addressbook")
+/**
+ * Updated for Lab 6
+ * Taken from Spring Tutorial (Accessing JPA Data)
+ *
+ * @author Sarah Abdallah
+ * @version 2022-03-04
+ */
+@RepositoryRestResource(collectionResourceRel = "AddressBook", path = "AddressBook")
 public interface AddressBookRepository extends PagingAndSortingRepository<AddressBook, Long>{
-    List<AddressBook> findAddressBookById(@Param("id") Long id);
+    AddressBook findAddressBookById(@Param("id") Long id);
 }

@@ -1,14 +1,13 @@
 package com.example.spring;
-
-import com.example.spring.AddressBook;
-
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
- * Updated for Lab 4
+ * Buddy Info class updated for Lab 6
+ * Represents a buddy within an Addressbook
  *
  * @author Sarah Abdallah
- * @version 2022-01-26
+ * @version 2022-03-04
  */
 
 @Entity
@@ -16,12 +15,10 @@ public class BuddyInfo {
     @Id
     @GeneratedValue
     private Long id;
+
+    private Long addressBookID;
     private String name;
     private String phoneNumber;
-
-    @ManyToOne
-    @JoinColumn(name = "addressbookId")
-    private AddressBook addressBook;
 
     /**
      * Default constructor for the pack.BuddyInfo class
@@ -30,91 +27,51 @@ public class BuddyInfo {
     public BuddyInfo(){
         this.name="";
         this.phoneNumber="";
+        this.addressBookID = 0L;
     }
 
-
     /**
-     * Constructor (2) for BuddyInfo
+     * Constructor for Buddyinfo that takes a name, phoneNumber, and addressBookID
      * @param name
      * @param phoneNumber
+     * @param addressBookID
      */
-    public BuddyInfo(String name, String phoneNumber){
-        this.name = name;
-        this.phoneNumber= phoneNumber;
-
-    }
-
-
-    /**
-     * Constructor (3) for BuddyInfo
-     * @param name
-     * @param phoneNumber
-     * @param addressBook
-     */
-    public BuddyInfo(String name, String phoneNumber, AddressBook addressBook){
+    public BuddyInfo(String name, String phoneNumber, Long addressBookID) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.addressBook = addressBook;
+        this.addressBookID = addressBookID;
     }
+    /* Getter and Setter Methods for parameters */
 
-
-    /**
-     * Getter for a buddy's name
-     * @return
-     */
     public String getName(){
         return name;
     }
 
-    /**
-     * Setter for the buddy's name
-     * @param name
-     */
     public void setName(String name){
         this.name=name;
     }
 
-
-    /**
-     * Getter for the buddy's phone number
-     * @return
-     */
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    /**
-     * Setter for the buddy's phone number
-     * @param phoneNumber
-     */
     public void setPhoneNumber(String phoneNumber){
         this.name=phoneNumber;
     }
 
-    /**
-     * Gets the id of this Buddy. The persistence provider should
-     * autogenerate a unique id for new player objects.
-     * @return the id
-     */
     public Long getId() {
         return this.id;
     }
 
-    /**
-     * Sets the id of this Buddy to the specified value.
-     * @param id the new id
-     */
     public void setId(Long id){
         this.id=id;
     }
 
-
     public Long getAddressBookId(){
-        return addressBook.getId();
+        return addressBookID;
     }
-
-    public void setAddressBook(AddressBook addressBook) {
-        this.addressBook = addressBook;
+    public void setAddressBook(Long addressBookID) {
+        this.addressBookID = addressBookID;
     }
 
 }
