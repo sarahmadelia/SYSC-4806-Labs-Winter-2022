@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AddressBook class updated for Lab 6
+ * AddressBook class updated for Lab 5
  * An AddressBook a list of buddies
  *
  * @author Sarah Abdallah

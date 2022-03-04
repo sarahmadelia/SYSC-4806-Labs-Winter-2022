@@ -3,7 +3,7 @@ package com.example.spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
- * Updated for Lab 6
+ * Updated for Lab 5
  * Taken from Spring Tutorial
  * (Serving Web Content with Spring MVC)
  *

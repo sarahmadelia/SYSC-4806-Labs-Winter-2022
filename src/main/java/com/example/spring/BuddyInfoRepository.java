@@ -2,7 +2,7 @@ package com.example.spring;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 /**
- * Updated for Lab 6
+ * Updated for Lab 5
  * Taken from Spring Tutorial (Accessing JPA Data)
  *
  * @author Sarah Abdallah

@@ -3,7 +3,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * Buddy Info class updated for Lab 6
+ * Buddy Info class updated for Lab 5
  * Represents a buddy within an Addressbook
  *
  * @author Sarah Abdallah
