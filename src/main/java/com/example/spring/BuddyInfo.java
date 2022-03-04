@@ -1,7 +1,8 @@
-package addressbook;
+package com.example.spring;
+
+import com.example.spring.AddressBook;
 
 import javax.persistence.*;
-import java.util.*;
 
 /**
  * Updated for Lab 4

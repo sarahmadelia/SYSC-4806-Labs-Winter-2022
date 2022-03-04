@@ -1,4 +1,4 @@
-package addressbook;
+package com.example.spring;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -1,4 +1,7 @@
-package addressbook;
+package com.example.spring;
+import com.example.spring.AddressBook;
+import com.example.spring.AddressBookRepository;
+import com.example.spring.BuddyInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
