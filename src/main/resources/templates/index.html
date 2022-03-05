@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/AddressBookApp.js}"></script>
+</head>
+<body onload="updateData()">
+<form>
+    <fieldset>
+        <legend>Address Book</legend>
+        <p>Name: <input type="text" id="addressBookName"/></p>
+        <p><button type = "button" onclick="newAddressBook()"> Add </button></p>
+    </fieldset>
+</form>
+<form>
+    <fieldset>
+        <legend>Buddy</legend>
+        <p>Name: <input type="text" id="buddyName"/></p>
+        <p>Phone: <input type="text" id="buddyPhone" /></p>
+        <p><button type = "button" onclick="newBuddy()"> Add </button></p>
+    </fieldset>
+</form>
+<h1>Address Books</h1>
+<table>
+    <tr>
+        <th>AddressBook Name</th>
+    </tr>
+    <tr>
+        <th>AddressBook ID</th>
+    </tr>
+    <tbody id="books">
+    </tbody>
+</table>
+<h1> Buddies </h1>
+<table>
+    <tr>
+        <th>Buddy Name</th>
+    </tr>
+    <tr>
+        <th>Phone Number</th>
+    </tr>
+    <tbody id="buddies">
+    </tbody>
+</table>
+</section>
+</body>
+</html>
