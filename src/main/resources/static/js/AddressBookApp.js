@@ -1,5 +1,10 @@
-let count = 0;
-
+/**
+ *
+ * Updated for Lab 6
+ *
+ * @author Sarah Abdallah
+ * @version 2022-03-04
+ */
 function newAddressBook() {
     let input = document.getElementById('addressBookName').value;
     $.ajax({
@@ -44,7 +49,6 @@ function newBuddy() {
     }, 1000);
 
 }
-
 
 function updateData() {
     $('#books').empty();

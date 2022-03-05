@@ -12,7 +12,7 @@
     <fieldset>
         <legend>Address Book</legend>
         <p>Name: <input type="text" id="addressBookName"/></p>
-        <p><button type = "button" onclick="newAddressBook()">Add New Address Book </button></p>
+        <p><button type = "button" onclick="newAddressBook()"> Add </button></p>
     </fieldset>
 </form>
 
@@ -21,19 +21,17 @@
         <legend>Buddy</legend>
         <p>Name: <input type="text" id="buddyName"/></p>
         <p>Phone: <input type="text" id="buddyPhone" /></p>
-        <label for="addressBookSelect">Address Book:</label>
-        <select id="addressBookSelect" name="addressBookSelect">
-            <option value="">Select an address book</option>
-        </select>
-        <p><button type = "button" onclick="newBuddy()">Add New Buddy</button></p>
+        <p><button type = "button" onclick="newBuddy()"> Add </button></p>
     </fieldset>
 </form>
 
 <h1>Address Books</h1>
 <table>
     <tr>
-        <th>Name</th>
-        <th>ID</th>
+        <th>AddressBook Name</th>
+    </tr>
+    <tr>
+        <th>AddressBook ID</th>
     </tr>
     <tbody id="books">
     </tbody>
@@ -42,9 +40,10 @@
 <h1> Buddies </h1>
 <table>
     <tr>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Address</th>
+        <th>Buddy Name</th>
+    </tr>
+    <tr>
+        <th>Phone Number</th>
     </tr>
     <tbody id="buddies">
     </tbody>
