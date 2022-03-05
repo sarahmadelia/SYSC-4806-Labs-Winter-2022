@@ -1,11 +1,16 @@
 version: 2.1
 jobs:
-  build:
+  hello-world:
     docker:
       - image: alpine:3.7
     steps:
+      - checkout
       - run:
-          name: The First Step
-          command: |
+          name: "Hello World"
+          command:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
+workflows:
+  hello-world-workflow:
+    jobs:
+      - hello-world
