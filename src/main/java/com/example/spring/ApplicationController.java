@@ -28,8 +28,6 @@ public class ApplicationController {
     public void newAddressBook(@RequestBody AddressBook addressBook){
         addressBookRepository.save(addressBook);
     }
-
-
     /**
      *
       * @param buddy

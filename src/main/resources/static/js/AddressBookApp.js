@@ -1,6 +1,8 @@
 /**
  *
  * Updated for Lab 6
+ * Lab 5 functionality partially incomplete
+ * (moving on to do Lab 6)
  *
  * @author Sarah Abdallah
  * @version 2022-03-04
@@ -16,7 +18,7 @@ function newAddressBook() {
         url: '/AddressBook/new',
         dataType: "json",
         data: JSON.stringify({
-            userName: input
+            name: input
         })
     });
     setTimeout(function () {
@@ -64,45 +66,21 @@ function updateData() {
         dataType: "json",
         success: function (data) {
             data._embedded.AddressBook.forEach(function (addressBook) {
-                updateBook(addressBook.userName, addressBook.addressBookId, addressBook.numBuddies);
+                updateBook(addressBook.name, addressBook.addressBookID);
                 document.getElementById("addressBookSelect").innerHTML +=
-                    "<option value=" + addressBook.addressBookId + ">" + addressBook.addressBookId + "</option>";
+                    "<option value=" + addressBook.addressBookID + ">" + addressBook.addressBookID + "</option>";
             });
         }
     });
 }
 
-function updateBook(userName, value, numBuddies) {
+function updateBook(name, value) {
     $('#books').append(
         "<tr>" +
-        "<td>" + userName + "</td>" +
+        "<td>" + name + "</td>" +
         "<td>" + value + "</td>" +
         "</tr>"
     );
-    getBuddies(value, numBuddies);
+    //getMyBuddies(value, numBuddies);
 }
 
-
-function getBuddies(value, numBuddies) {
-    $.ajax({
-        type: "GET",
-        url: '/AddressBook/' + value + '/buddies',
-        dataType: "json",
-        success: function (data) {
-            updateBuddies(data, numBuddies);
-        }
-    });
-}
-
-
-function updateBuddies(data, numBuddies) {
-    for (let i = 0; i < numBuddies; i++) {
-        $('#buddies').append(
-            "<tr>" +
-            "<td>" + data._embedded.BuddyInfo[i].name + "</td>" +
-            "<td>" + data._embedded.BuddyInfo[i].phone + "</td>" +
-            "<td>" + data._embedded.BuddyInfo[i].addressBookId + "</td>" +
-            "</tr>"
-        );
-    }
-}
